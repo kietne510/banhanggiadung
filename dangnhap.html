@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(/PhamTuanKiet211A010273DoPhuPhuong211A290038/Images/anhnen3.jpg);
+            background-size: cover;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            }
+        #anhnen{
+            width: 40%;
+            background-size: cover ;
+            
+        }
+            h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: orange;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgb(201, 134, 10);;
+        }
+        a {text-decoration: none;}
+        #loginfb, #logingg {width: 50%; border: 1px solid rgb(211, 211, 211); cursor: pointer; }
+        .loginkhac button, .loginkhac div { display: inline-block; padding: 2px; }
+        .loginkhac { display: flex; justify-content: space-between;}
+        #loginfb {margin-right: 10px;}
+        #logogg {margin-left: 10px; }
+        button:hover {background-color: rgb(184, 184, 184);}
+        #quenmatkhau {font-size: 12px;}
+        #hoac{text-align: center; margin-top: 10px; margin-bottom: 10px; font-size: 15px; }
+        #hoac span {position: relative;display: inline-block;}
+        #hoac span::before, #hoac span::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 275%; 
+            height: 1px; 
+            background-color: #000; 
+        }
+
+        #hoac span::before {
+            right: 100%; 
+            margin-right: 10px; 
+        }
+
+        #hoac span::after {
+            left: 100%;
+            margin-left: 10px; 
+        }
+        .dangky{font-size: 12px; text-align: center; margin-top: 10px; color: grey;}
+    </style>
+</head>
+<body>
+        <div class="container">
+            <div>
+            <h2>Đăng nhập</h2>
+            <form id="loginForm" action="" method="post">
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" id="username" name="username" placeholder="Tên đăng nhập" required>
+    
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
+    
+                <input type="button" value="Đăng nhập" class="btn" onclick="window.location.href='index.html'">
+            </form>
+            <div id="quenmatkhau">
+                <a href="#">Quên mật khẩu</a>
+            </div>
+            <div id="hoac">
+                <span>HOẶC</span>
+            </div>
+            <div class="loginkhac">
+                <button id="loginfb" onclick="window.location.href='index.html'">
+                    <div id="logofb"><img src="logofacebook.png" style="width: 20px;"></div>
+                    <div>FACEBOOK</div>
+                </button>
+                <button id="logingg" onclick="window.location.href='index.html'">
+                    <div id="logogg"><img src="logogoogle.jpg" style="width: 20px;"></div>
+                    <div>GOOGLE</div>
+                </button>
+            </div>
+            <div class="dangky">
+                Lần đầu đến với trang web?<a href="dangky.html">Đăng ký</a>
+            </div>
+            </div>
+        </div>
+</body>
+</html>

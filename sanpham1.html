@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(anhnen3.jpg);
+            background-size: cover;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+
+        .product-details {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 50px;
+        }
+
+        .sanpham {
+            text-align: center;
+            margin-right: 20px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .sanpham img {
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            max-width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .button-group {
+            margin-top: 20px;
+        }
+
+        button{
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: rgb(194, 126, 0);
+        }
+
+        .suggestions {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+        }
+
+        .suggestions h2 {
+            margin-bottom: 20px;
+        }
+
+        .suggestion-item {
+            display: inline-block;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #333;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            z-index: 999;
+        }
+
+        .arrow-left {
+            left: 10px;
+        }
+
+        .arrow-right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chi Tiết Sản Phẩm</h1>
+    <div class="product-details">
+        <div class="sanpham">
+            <img src="sanpham1.png" alt="Ấm Pha Trà Màu Sắc">
+            <button class="arrow arrow-left">&lt;</button>
+            <button class="arrow arrow-right">&gt;</button>
+            <h3>Ấm Pha Trà Màu Sắc</h3>
+            <p>Giá: 149.000đ</p>
+            <div class="button-group">
+                <button>Thêm vào giỏ hàng</button>
+                <button>Mua ngay</button>
+            </div>
+        </div>
+        <div class="product-description">
+            <h2>Thông Tin Chi Tiết</h2>
+            <p>Mô tả sản phẩm: Đây là một chiếc ấm pha trà với màu sắc đa dạng và thiết kế đẹp mắt.</p>
+        </div>
+    </div>
+
+    <div class="suggestions">
+        <h2>Có thể bạn quan tâm</h2>
+        <div class="suggestion-item">
+            <img src="nc1.png" alt="Suggestion 1" width="150px" height="100px">
+            <h3>Sản phẩm gợi ý 1</h3>
+            <p>Giá: 450.000đ</p>
+            <button>Xem chi tiết</button>
+        </div>
+        <div class="suggestion-item">
+            <img src="dk2.jpg" alt="Suggestion 2" width="150px" height="100px">
+            <h3>Sản phẩm gợi ý 2</h3>
+            <p>Giá: 324.000đ</p>
+            <button>Xem chi tiết</button>
+        </div>
+        <div class="suggestion-item">
+            <img src="dk1.jpg" alt="Suggestion 3" width="150px" height="100px">
+            <h3>Sản phẩm gợi ý 3</h3>
+            <p>Giá: 120.000đ</p>
+            <button>Xem chi tiết</button>
+        </div>
+    </div>
+
+    <script>
+        const images = ["sanpham1.png", "sanpham2.png", "sanpham3.png"]; // Danh sách các hình ảnh
+        let currentIndex = 0;
+
+        const imgElement = document.querySelector(".sanpham img");
+
+        // Hàm để cập nhật hình ảnh hiện tại
+        function updateImage() {
+            imgElement.src = images[currentIndex];
+        }
+
+    </script>
+</body>
+</html>
+
